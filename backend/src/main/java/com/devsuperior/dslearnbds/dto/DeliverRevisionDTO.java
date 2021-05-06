@@ -15,7 +15,6 @@ public class DeliverRevisionDTO implements Serializable {
 	}
 
 	public DeliverRevisionDTO(DeliverStatus status, String feedback, Integer correctCount) {
-		super();
 		this.status = status;
 		this.feedback = feedback;
 		this.correctCount = correctCount;

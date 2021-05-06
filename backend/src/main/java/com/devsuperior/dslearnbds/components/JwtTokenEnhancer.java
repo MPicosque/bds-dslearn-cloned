@@ -13,6 +13,8 @@ import org.springframework.stereotype.Component;
 import com.devsuperior.dslearnbds.entities.User;
 import com.devsuperior.dslearnbds.repositories.UserRepository;
 
+
+
 @Component
 public class JwtTokenEnhancer implements TokenEnhancer {
 
@@ -21,7 +23,7 @@ public class JwtTokenEnhancer implements TokenEnhancer {
 	
 	@Override
 	public OAuth2AccessToken enhance(OAuth2AccessToken accessToken, OAuth2Authentication authentication) {
-		
+
 		User user = userRepository.findByEmail(authentication.getName());
 		
 		Map<String, Object> map = new HashMap<>();
